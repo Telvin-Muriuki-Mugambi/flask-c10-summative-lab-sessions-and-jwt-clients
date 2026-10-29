@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "==2.2.2"
+flask-sqlalchemy = "==3.0.3"
+werkzeug = "==2.2.2"
+flask-migrate = "==4.0.0"
+flask-bcrypt = "==1.0.1"
+flask-jwt-extended = "==4.7.1"
+python-dotenv = "*"
+
+[dev-packages]
+pytest = "==7.2.0"
