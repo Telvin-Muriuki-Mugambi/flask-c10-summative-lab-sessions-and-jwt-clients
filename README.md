@@ -55,6 +55,21 @@ The API uses `DATABASE_URL` when set and otherwise stores its SQLite database
 in `instance/app.db`. Start the frontend separately from
 `client-with-jwt` with `npm install && npm start`.
 
+## Interactive CLI
+
+With the API running, launch the terminal client in another shell:
+
+```bash
+pipenv run python cli.py
+```
+
+The CLI supports signing up or logging in, then listing, viewing, creating,
+updating, and deleting the signed-in user's notes. It uses the existing JWT
+API (not Flask cookie sessions), keeps the access token in memory only, and
+prompts for passwords without echoing them. Logging out discards the local
+token; access tokens otherwise expire after one hour. Set `API_URL` to use a
+different API address; the default is `http://127.0.0.1:5555`.
+
 ## Authentication
 
 Send JSON to the authentication endpoints. Successful registration and login
